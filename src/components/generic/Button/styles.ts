@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { media } from '../../../theme/theme'
 // types
 import { ButtonContainerProps, ButtonStyledTextProps } from './types'
 
@@ -34,4 +35,8 @@ export const StyledText = styled.p<ButtonStyledTextProps>`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme, variantHeight }) =>
     theme.button.fontSize[variantHeight]};
+
+  ${media.xs} {
+    font-size: 12px;
+  }
 `

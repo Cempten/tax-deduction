@@ -12,6 +12,8 @@ import {
   StyledLabel,
   StyledText,
   PaymentsContainer,
+  SubStyledRow,
+  ButtonContainer,
 } from './styles'
 import { Tag } from '../../../generic/Tag'
 import { Button } from '../../../generic/Button'
@@ -80,18 +82,21 @@ export const DeductionForm: FC = () => {
 
       <StyledRow>
         <StyledText>Что уменьшаем?</StyledText>
-        {tags.map((x) => (
-          <Tag
-            key={x}
-            title={x}
-            checked={x === selectedTag}
-            onClick={handleTagClick}
-            margin="0 16px 0 0"
-          />
-        ))}
+        <SubStyledRow>
+          {tags.map((x) => (
+            <Tag
+              key={x}
+              title={x}
+              checked={x === selectedTag}
+              onClick={handleTagClick}
+            />
+          ))}
+        </SubStyledRow>
       </StyledRow>
 
-      <Button>Добавить</Button>
+      <ButtonContainer>
+        <Button>Добавить</Button>
+      </ButtonContainer>
     </DeductionFormContainer>
   )
 }

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { media } from '../../../theme/theme'
 // types
 import { TagContainerProps } from './types'
 
@@ -7,8 +8,8 @@ export const TagContainer = styled.div<TagContainerProps>`
   align-items: center;
   height: 36px;
   width: auto;
+  margin-right: 16px;
   padding: 0 12px;
-  margin: ${({ margin }) => (margin ? margin : '0')};
   border-radius: 50px;
   cursor: pointer;
   color: ${({ theme, checked }) =>
@@ -19,5 +20,9 @@ export const TagContainer = styled.div<TagContainerProps>`
   &:hover {
     background: ${({ theme, checked }) =>
       checked ? theme.gradients[0] : theme.colors.gray3};
+  }
+
+  ${media.xs} {
+    margin-right: 8px;
   }
 `
