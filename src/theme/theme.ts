@@ -9,6 +9,8 @@ const colors = {
   white: '#FFFFFF',
   red: '#EA0029',
   gray: '#BEC5CC',
+  gray1: '#DFE3E6',
+  orange: '#F53A31',
 }
 
 const button = {
