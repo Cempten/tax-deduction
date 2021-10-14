@@ -39,6 +39,11 @@ const button = {
   },
 }
 
+export const media = {
+  sm: '@media (max-width: 1440px)',
+  xs: '@media (max-width: 768px)',
+}
+
 export const theme = {
   gradients,
   colors,
