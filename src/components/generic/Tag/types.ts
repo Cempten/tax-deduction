@@ -5,4 +5,5 @@ export type TagProps = {
 
 export type TagContainerProps = {
   checked: boolean
+  margin?: string
 }

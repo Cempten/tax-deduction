@@ -22,7 +22,7 @@ const button = {
     [ButtonVC.secondary]: `1px solid ${colors.white}`,
   },
   hoveredColor: {
-    [ButtonVC.primary]: gradients[0],
+    [ButtonVC.primary]: colors.red,
     [ButtonVC.secondary]: colors.white,
   },
   hoveredTextColor: {

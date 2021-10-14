@@ -12,6 +12,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   background: ${({ theme }) => theme.gradients[0]};
   border: ${({ theme, variantColor }) => theme.button.border[variantColor]};
   cursor: pointer;
+  box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
 
   &:hover {
     background: ${({ theme, variantColor }) =>

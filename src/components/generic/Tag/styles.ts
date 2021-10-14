@@ -8,6 +8,7 @@ export const TagContainer = styled.div<TagContainerProps>`
   height: 36px;
   width: auto;
   padding: 0 12px;
+  margin: ${({ margin }) => (margin ? margin : '0')};
   border-radius: 50px;
   cursor: pointer;
   color: ${({ theme, checked }) =>

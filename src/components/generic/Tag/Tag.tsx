@@ -4,14 +4,14 @@ import { TagContainer } from './styles'
 // types
 import { TagProps } from './types'
 
-export const Tag: FC<TagProps> = ({ title, checked, onClick }) => {
+export const Tag: FC<TagProps> = ({ title, onClick, ...props }) => {
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const title = e.currentTarget.dataset.title
     title && onClick(title)
   }
 
   return (
-    <TagContainer data-title={title} checked={checked} onClick={handleClick}>
+    <TagContainer data-title={title} onClick={handleClick} {...props}>
       {title}
     </TagContainer>
   )

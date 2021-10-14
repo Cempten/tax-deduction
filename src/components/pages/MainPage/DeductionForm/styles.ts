@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 export const DeductionFormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 476px;
+  width: 488px;
   padding: 32px;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 30px;
@@ -24,10 +24,38 @@ export const StyledHint = styled.p`
   line-height: 24px;
 `
 
-export const StyledText = styled.div`
+export const StyledLabel = styled.div`
   color: ${({ theme }) => theme.colors.black};
   font-size: 14px;
   line-height: 24px;
   font-weight: 500;
   margin: 0;
+`
+
+export const StyledText = styled(StyledLabel)`
+  margin-right: 32px;
+`
+
+export const CalculateButton = styled.div`
+  width: 76px;
+  margin-bottom: 16px;
+  color: ${({ theme }) => theme.colors.red};
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.orange};
+  }
+
+  &:active {
+    color: ${({ theme }) => theme.colors.red};
+  }
+`
+
+export const StyledRow = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 8px 0 40px;
 `
