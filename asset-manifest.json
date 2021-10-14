@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/tax-deduction/static/css/main.7176885d.chunk.css",
+    "main.js": "/tax-deduction/static/js/main.7e62fcd4.chunk.js",
+    "main.js.map": "/tax-deduction/static/js/main.7e62fcd4.chunk.js.map",
+    "runtime-main.js": "/tax-deduction/static/js/runtime-main.d4aa914b.js",
+    "runtime-main.js.map": "/tax-deduction/static/js/runtime-main.d4aa914b.js.map",
+    "static/js/2.6b3d1154.chunk.js": "/tax-deduction/static/js/2.6b3d1154.chunk.js",
+    "static/js/2.6b3d1154.chunk.js.map": "/tax-deduction/static/js/2.6b3d1154.chunk.js.map",
+    "static/js/3.71a6d8a0.chunk.js": "/tax-deduction/static/js/3.71a6d8a0.chunk.js",
+    "static/js/3.71a6d8a0.chunk.js.map": "/tax-deduction/static/js/3.71a6d8a0.chunk.js.map",
+    "index.html": "/tax-deduction/index.html",
+    "static/css/main.7176885d.chunk.css.map": "/tax-deduction/static/css/main.7176885d.chunk.css.map",
+    "static/js/2.6b3d1154.chunk.js.LICENSE.txt": "/tax-deduction/static/js/2.6b3d1154.chunk.js.LICENSE.txt",
+    "static/media/check-icon.db42bbfd.svg": "/tax-deduction/static/media/check-icon.db42bbfd.svg",
+    "static/media/cross-icon.075fa808.svg": "/tax-deduction/static/media/cross-icon.075fa808.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d4aa914b.js",
+    "static/js/2.6b3d1154.chunk.js",
+    "static/css/main.7176885d.chunk.css",
+    "static/js/main.7e62fcd4.chunk.js"
+  ]
+}
