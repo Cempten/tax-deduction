@@ -4,10 +4,16 @@ import { StyledInput, InputContainer, StyledErrorMessage } from './styles'
 // types
 import { InputProps } from './types'
 
-export const Input: FC<InputProps> = ({ errorMessage, margin, ...props }) => {
+export const Input: FC<InputProps> = ({
+  register,
+  name,
+  errorMessage,
+  margin,
+  ...props
+}) => {
   return (
     <InputContainer margin={margin}>
-      <StyledInput {...props} />
+      <StyledInput {...register(name)} {...props} />
       {!!errorMessage && (
         <StyledErrorMessage>{errorMessage}</StyledErrorMessage>
       )}

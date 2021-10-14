@@ -6,6 +6,15 @@ export const InputContainer = styled.div<InputContainerProps>`
   display: flex;
   flex-direction: column;
   margin: ${({ margin }) => (margin ? margin : '0')};
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
 `
 
 export const StyledInput = styled.input`
