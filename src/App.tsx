@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import { ThemeProvider } from '@emotion/react'
 // local libs
 import { theme } from './theme'
