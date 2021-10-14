@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react'
+import { Scrollbars } from 'react-custom-scrollbars'
 // local libs
 import { Input } from '../../../generic/Input'
 import { getPayments, tags } from './utils'
@@ -10,14 +11,17 @@ import {
   StyledRow,
   StyledLabel,
   StyledText,
+  PaymentsContainer,
 } from './styles'
 import { Tag } from '../../../generic/Tag'
 import { Button } from '../../../generic/Button'
 import { useForm } from 'react-hook-form'
 import { FormItems, FormData } from './types'
+import { Payment } from './Payment'
 
 export const DeductionForm: FC = () => {
   const [selectedTag, setSelectedTag] = useState<string>(tags[0])
+  const [paymentArr, setPaymentArr] = useState<Array<number> | null>(null)
 
   const {
     register,
@@ -39,7 +43,8 @@ export const DeductionForm: FC = () => {
     }
     setError(FormItems.salaryInput, {})
 
-    console.log(getPayments(Number(salary)))
+    const payments = getPayments(Number(salary))
+    setPaymentArr(payments)
   }
 
   return (
@@ -61,6 +66,17 @@ export const DeductionForm: FC = () => {
         errorMessage={errors[FormItems.salaryInput]?.message}
       />
       <CalculateButton onClick={calculateDeduction}>Рассчитать</CalculateButton>
+
+      {!!paymentArr && (
+        <PaymentsContainer>
+          <StyledLabel>Итого можете внести в качестве досрочных:</StyledLabel>
+          <Scrollbars autoHeight autoHeightMax={228}>
+            {paymentArr.map((x, i) => (
+              <Payment key={i} sum={x} index={i + 1} />
+            ))}
+          </Scrollbars>
+        </PaymentsContainer>
+      )}
 
       <StyledRow>
         <StyledText>Что уменьшаем?</StyledText>

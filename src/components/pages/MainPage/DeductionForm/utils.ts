@@ -8,8 +8,8 @@ export const getPayments = (salary: number): Array<number> => {
   const numberOfFullPayment = Math.floor(maxDeduction / annualTax)
   const numberOfPayment = numberOfFullPayment + 1
 
-  const payments = Array.from({ length: numberOfPayment }, (x, i) =>
-    i !== numberOfPayment - 1 ? annualTax : remainder,
+  const payments = Array.from({ length: numberOfPayment }, (_, i) =>
+    i !== numberOfPayment - 1 ? Math.round(annualTax) : Math.round(remainder),
   )
 
   return payments

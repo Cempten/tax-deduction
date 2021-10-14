@@ -59,3 +59,8 @@ export const StyledRow = styled.div`
   align-items: center;
   margin: 8px 0 40px;
 `
+
+export const PaymentsContainer = styled.div`
+  margin-top: -8px;
+  margin-bottom: 12px;
+`

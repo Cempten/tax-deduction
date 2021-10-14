@@ -11,8 +11,6 @@ export const StyledLabel = styled.label`
   input:disabled + div {
     background: ${({ theme }) => theme.colors.gray};
   }
-
-  background: black;
 `
 
 export const StyledCheckbox = styled.input`
