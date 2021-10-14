@@ -1,0 +1,1 @@
+export { DeductionForm } from './DeductionForm'

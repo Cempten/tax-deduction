@@ -6,7 +6,7 @@ import { ReactComponent as CrossIcon } from './assets/cross-icon.svg'
 // types
 import { PopupProps } from './types'
 
-export const Popup: FC<PopupProps> = ({ isOpen, toggle }) => {
+export const Popup: FC<PopupProps> = ({ content, isOpen, toggle }) => {
   const handleContentClick = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
   ) => e.stopPropagation()
@@ -17,6 +17,7 @@ export const Popup: FC<PopupProps> = ({ isOpen, toggle }) => {
         <CloseButtonWrapper onClick={toggle}>
           <CrossIcon />
         </CloseButtonWrapper>
+        {content}
       </PopupContent>
     </PopupOverlay>
   )

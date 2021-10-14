@@ -2,6 +2,7 @@ import { FC, useState } from 'react'
 // local libs
 import { Button } from '../../generic/Button'
 import { Popup } from '../../generic/Popup'
+import { DeductionForm } from './DeductionForm/DeductionForm'
 import { MainPageContainer, ButtonContainer } from './styles'
 
 export const MainPage: FC = () => {
@@ -16,7 +17,11 @@ export const MainPage: FC = () => {
         </Button>
       </ButtonContainer>
 
-      <Popup content={<></>} isOpen={isPopupOpen} toggle={togglePopup} />
+      <Popup
+        content={<DeductionForm />}
+        isOpen={isPopupOpen}
+        toggle={togglePopup}
+      />
     </MainPageContainer>
   )
 }

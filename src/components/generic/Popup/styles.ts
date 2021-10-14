@@ -15,6 +15,7 @@ export const PopupOverlay = styled.div`
 
 export const PopupContent = styled.div`
   position: relative;
+  font-family: Lab Grotesque;
 `
 
 export const CloseButtonWrapper = styled.div`
